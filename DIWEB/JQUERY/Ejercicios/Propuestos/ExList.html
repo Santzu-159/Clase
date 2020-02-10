@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ejercicios Propuestos de JQuery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-color: burlywood;">
+
+        <!--Librería necesaria para los ejercicios-->
+        <div class="container mt-3 text-center">
+            <h1>Librería de Google</h1>
+            <h3><span class="badge badge-secondary">https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js</span></h3>
+        </div>
+
+        <!--Ejercicios Resueltos-->
+        <div class="container mt-3 jumbotron">
+            <h1 class="display-5">Consultar Ejercicios Resueltos y Comentados:</h1>
+            <p class="lead"><a href="https://github.com/Lobozel/Clase/tree/master/DIWEB/JQUERY/Ejercicios/Resueltos%20y%20Comentados">https://github.com/Lobozel/Clase/tree/master/DIWEB/JQUERY/Ejercicios/Resueltos%20y%20Comentados</a></p>
+            <hr class="my-2">
+            <p>¡Puedes mandar un comprimido con los ejercicios realizados a Lobozel para que te los corriga personalmente!</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="https://github.com/Lobozel/Clase/tree/master/DIWEB/JQUERY/Ejercicios/Resueltos%20y%20Comentados" role="button">Ir al Repositorio</a>
+            </p>
+          </div>
+
+          
+
+    
+        <!--Ejercicios-->
+        <div id="accordion" class='container mb-3'>
+            <!---->
+            <div class="card">
+              <div class="card-header" id="h1">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#ejercicio1" aria-expanded="true" aria-controls="ejercicio1">
+                    Ejercicio 1
+                  </button>
+                </h5>
+              </div>
+          
+              <div id="ejercicio1" class="collapse show" aria-labelledby="h1" data-parent="#accordion">
+                <div class="card-body">
+                    <!--Enunciado del ejercicio 1-->
+                    Al pulsar sobre un elemento de la página, por ejemplo, un párrafo, mostrará un mensaje al Usuario.
+                </div>
+              </div>
+            </div>
+            <!---->
+            <div class="card">
+              <div class="card-header" id="h2">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ejercicio2" aria-expanded="false" aria-controls="ejercicio2">
+                    Ejercicio 2
+                  </button>
+                </h5>
+              </div>
+              <div id="ejercicio2" class="collapse" aria-labelledby="h2" data-parent="#accordion">
+                <div class="card-body">
+                  <!--Enunciado del ejercicio 2-->
+                  Al pasar el ratón por encima de un título (h1), este cambiará de color.
+                </div>
+              </div>
+            </div>
+            <!---->
+            <div class="card">
+              <div class="card-header" id="h3">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ejercicio3" aria-expanded="false" aria-controls="ejercicio3">
+                    Ejercicio 3
+                  </button>
+                </h5>
+              </div>
+              <div id="ejercicio3" class="collapse" aria-labelledby="h3" data-parent="#accordion">
+                <div class="card-body">
+                  <!--Enunciado del ejercicio 3-->
+                  · Define una clase con un estilo personalizado que haga resaltar un texto.<br>
+                  · Coloca dos botones en la página, uno dirá "Poner Clase" y el otro "Quitar Clase".<br>
+                  · Al pinchar sobre "Poner Clase", se le añaderá la clase que definiste en el primer paso a todos los párrafos de la página.<br>
+                  · Por otro lado, al pinchar sobre "Quitar Clase", se eliminarán las clases, si las hubiera, de los párrafos de la página.
+                </div>
+              </div>
+            </div>
+            <!---->
+            <div class="card">
+                <div class="card-header" id="h4">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ejercicio4" aria-expanded="false" aria-controls="ejercicio4">
+                      Ejercicio 4
+                    </button>
+                  </h5>
+                </div>
+                <div id="ejercicio4" class="collapse" aria-labelledby="h4" data-parent="#accordion">
+                  <div class="card-body">
+                    <!--Enunciado del ejercicio 4-->
+                    · Añade un elemento visible a la página (puede ser un &lt;div&gt; con un color sólido, una tabla con bordes o simplemente texto).<br>
+                    · Añade los siguientes botones: "Ocultar o Ver", "Transparente al 50%" y "Ver al 100%"<br>
+                    · El botón "Ocultar o Ver" deberá, al pinchar sobre él, ocultar el elemento, en caso de que esté visible, o, si está oculto, hacerlo visible.<br>
+                    · El botón "Transparente al 50%" cambiará la opacidad del elemento al 50% o 0,5.<br>
+                    · El botón "Ver al 100%" cambiará la opacidad del elemento al 100% o 1.<br>
+                    <span style='color:red; font-weight: bolder;'>(Opcional)</span> <span style='font-weight:bold;'>Intenta agregar algún efecto a la hora de mostrar u ocultar el elemento.</span>
+                  </div>
+                </div>
+              </div>
+              <!---->
+              <div class="card">
+                <div class="card-header" id="h5">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ejercicio5" aria-expanded="false" aria-controls="ejercicio5">
+                      Ejercicio 5
+                    </button>
+                  </h5>
+                </div>
+                <div id="ejercicio5" class="collapse" aria-labelledby="h5" data-parent="#accordion">
+                  <div class="card-body">
+                    <!--Enunciado del ejercicio 5-->
+                    · Crea un elemento &lt;div&gt; con un identificador único, con texto de contenido. <br>
+                    · Añade también una caja de texto, con algún valor por defecto. <br>
+                    · Implementa botones en la página que permitan lo siguiente: <br>
+                    · > Recuperar la información de &lt;div&gt; en forma de texto plano. <br>
+                    · > Recuperar el html del objeto &lt;div&gt;. <br>
+                    · > Recuperar la información del cuadro de texto en forma de texto plano. <br>
+                    · > Cambiar el texto del &lt;div&gt; por "Nuevo texto". <br>
+                    · > Cambiar el valor de la caja de texto por "Nuevo valor". <br>
+                    <span style="font-weight: bolder;">Pista: </span>intenta utilizar los métodos text(), val(), html() y attr() para ver los diferentes resultados.
+                  </div>
+                </div>
+              </div>
+              <!---->
+              <div class="card">
+                <div class="card-header" id="h6">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ejercicio6" aria-expanded="false" aria-controls="ejercicio6">
+                      Ejercicio 6
+                    </button>
+                  </h5>
+                </div>
+                <div id="ejercicio6" class="collapse" aria-labelledby="h6" data-parent="#accordion">
+                  <div class="card-body">
+                    <!--Enunciado del ejercicio 6-->
+                    · Crea una lista de al menos 4 items. <br>
+                    · Implementa botones que permitan las siguientes funciones: <br>
+                    · > Eliminar la lista completa. <br>
+                    · > Restaurar la lista <i>(La lista inicial sin contar los posibles cambios hechas por el usuario)</i>. <br>
+                    . > Añadir un elemento al final de la lista. <br>
+                    . > Añadir un elemento al principio de la lista. <br>
+                    . > Eliminar el último elemento. <br>
+                    . > Eliminar el primer elemento.
+                  </div>
+                </div>
+              </div>
+              <!---->
+          </div>
+
+    </body>
+</html>

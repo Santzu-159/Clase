@@ -1,1 +1,0 @@
-Estudiar, prácticar y enseñar DIWEB.
