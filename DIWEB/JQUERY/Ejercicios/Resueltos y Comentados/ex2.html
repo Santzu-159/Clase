@@ -18,26 +18,53 @@
         <div class="container bg-info border border-dark jumbotron jumbotron-fluid">
             <div class="container">
               <h1 class="display-5">¿Qué solución aporta este ejercicio?</h1>
-              <p class="lead">Enunciado.</p>
+              <p class="lead">Al colocar el cursor sobre una etiqueta &lt;h1&gt; con la clase .camaleon, cambia de color.<br>
+            Recupera el color previo al mover el ratón fuera del elemento.</p>
             </div>
           </div>
 
         <!--Elemento de interacción con el Usuario-->
-        
+        <h1 class='camaleon text-center'>Puedo cambiar de color</h1>
 
         <!--Código JS-->
         <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript">
-            
+            $(function(){
+                $("h1.camaleon").mouseover(colorWhite);
+                $("h1.camaleon").mouseout(colorBlack);
+            });
+            function colorWhite(){
+                $(this).css("color","rgba(255,255,255,1.00)")
+            }
+            function colorBlack(){
+                $(this).css("color","rgba(0,0,0,1.00)")
+            }
             </script>
         <!--Bloque de Código Visible-->
-        <div class="container bg-dark border border-secondary text-white">
+        <div class="container bg-dark border border-secondary text-white mb-3">
             <code>
                     &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;<br>
                     &lt;script type="text/javascript"><br>
-            
-                &lt;/script&gt;
+                    $(function(){<br>
+                        <span class='text-success'>//Seleccionamos las etiquetas h1 con la clase camaleon con $("h1.camaleon")</span><br>
+                        <span class='text-success'>//El evento .mouseover() se lanza cuando el raton pasa por encima del elemento.</span><br>
+                    &nbsp;&nbsp;&nbsp;$("h1.camaleon").mouseover(colorWhite);<br>
+                    <span class='text-success'>//El evento .mouseout() se lanza cuando el raton deja de estar encima del elemento.</span><br>
+                    &nbsp;&nbsp;&nbsp;$("h1.camaleon").mouseout(colorBlack);<br>
+                    });<br>
+                    function colorWhite(){<br>
+                        <span class='text-success'>//usar $(this) nos permite seleccionar la etiqueta que llamó a este método a través del evento.</span><br>
+                        <span class='text-success'>//Cambiamos su propiedad css, por parámetros le indicamos que estilo queremos cambiar y que valor le queremos dar a ese estilo.</span><br>
+                        &nbsp;&nbsp;&nbsp;$(this).css("color","rgba(255,255,255,1.00)")<br>
+                    }<br>
+                    function colorBlack(){<br>
+                        <span class='text-success'>//funciona de forma similar que el método colorWhite().</span><br>
+                        &nbsp;&nbsp;&nbsp;$(this).css("color","rgba(0,0,0,1.00)")<br>
+                    }<br>
+                &lt;/script&gt;<br>
+<br>
+                <span class='text-secondary'>//Propuesta: Hacer el mismo ejercicio pero convinar los métodos colorWhite() y colorBlack() en un solo método cambiarColor(color)</span><br>
                 </code>
         </div>
     
