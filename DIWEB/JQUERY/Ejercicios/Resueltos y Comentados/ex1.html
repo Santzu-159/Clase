@@ -4,31 +4,71 @@
         <title>Ejercicio 1</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/path/to/styles/default.css"/>
-<script src="/path/to/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous">
     </head>
-    <body>
+    <body style="background-color: mediumspringgreen;">
 
         <!--Librería necesaria para los ejercicios-->
         <div class="container mt-3 text-center">
             <h1>Librería de Google</h1>
             <h3><span class="badge badge-secondary">https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js</span></h3>
         </div>
-    
+
         <!--Enunciado-->
-        <div class="container bg-info border border-dark jumbotron jumbotron-fluid">
+        <div class="container bg-info border border-dark jumbotron
+            jumbotron-fluid">
             <div class="container">
-              <h1 class="display-5">¿Qué solución aporta este ejercicio?</h1>
-              <p class="lead">Enunciado.</p>
+                <h1 class="display-5">¿Qué solución aporta este ejercicio?</h1>
+                <p class="lead">Al hacer click sobre una etiquéta de título
+                    &lt;h1&gt; con la clase ".pulsable", mostrará un mensaje
+                    (alert) al usuario.</p>
             </div>
-          </div>
+        </div>
 
+        <!--Elemento de interacción con el Usuario-->
+        <h1 class='pulsable text-center'>Pulsame</h1>
 
+        <!--Código JS-->
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(iniciar);
+            function iniciar()
+                 { $("h1.pulsable").click(mensaje);}
+            function mensaje()
+                { alert("Has hecho clic"); }
+            </script>
+        <!--Bloque de Código Visible-->
+        <div class="container bg-dark border border-secondary text-white">
+            <code>
+                    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;<br>
+                    &lt;script type="text/javascript"><br>
+            $(document).ready(iniciar);<br>
+            &nbsp;&nbsp;&nbsp;function iniciar()<br>
+            <span class='text-success'>//Seleccionamos las etiquetas h1 con la clase pulsable con $("h1.pulsable")</span><br>
+            <span class='text-success'>//con el método .click() le damos el evento onclick y le indicamos que función ejecutar con el evento</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ $("h1.pulsable").click(mensaje);}<br>
+            &nbsp;&nbsp;&nbsp;function mensaje()<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ alert("Has hecho clic"); }<br>
+                &lt;/script&gt;
+                </code>
+        </div>
 
-        <pre><code>
-            // code here
-        </code></pre>
+        <div class="container bg-dark border border-secondary text-white mb-3">
+            <h2>Otra forma de hacerlo:</h2>
+            <code>
+                    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;<br>
+                    &lt;script type="text/javascript"><br>
+                    $(function())<br>
+                    &nbsp;&nbsp;&nbsp;{ $("h1.pulsable").click(mensaje);}<br>
+                 ;function mensaje()<br>
+                 &nbsp;&nbsp;&nbsp;{ alert("Has hecho clic"); }<br>
+                &lt;/script&gt;
+                </code>
+        </div>
+
     </body>
 </html>
