@@ -1,45 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Ejercicio 6</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    </head>
-    <body style="background-color: mediumspringgreen;">
+  <head>
+    <title>Ejercicio 6</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background-color: mediumspringgreen;">
+    <!--Librería necesaria para los ejercicios-->
+    <div class="container mt-3 text-center">
+      <h1>Librería de Google</h1>
+      <h3>
+        <span class="badge badge-secondary"
+          >https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js</span
+        >
+      </h3>
+    </div>
 
-        <!--Librería necesaria para los ejercicios-->
-        <div class="container mt-3 text-center">
-            <h1>Librería de Google</h1>
-            <h3><span class="badge badge-secondary">https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js</span></h3>
-        </div>
+    <!--Enunciado-->
+    <div class="container bg-info border border-dark jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-5">¿Qué solución aporta este ejercicio?</h1>
+        <p class="lead">Enunciado.</p>
+      </div>
+    </div>
 
-        <!--Enunciado-->
-        <div class="container bg-info border border-dark jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-5">¿Qué solución aporta este ejercicio?</h1>
-              <p class="lead">Enunciado.</p>
-            </div>
-          </div>
-
-        <!--Elemento de interacción con el Usuario-->
-        
-
-        <!--Código JS-->
-        <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            
-            </script>
-        <!--Bloque de Código Visible-->
-        <div class="container bg-dark border border-secondary text-white  mb-3">
-            <code>
-                    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;<br>
-                    &lt;script type="text/javascript"><br>
-            
-                &lt;/script&gt;
-                </code>
-        </div>
-    
-    </body>
+    <!--Elemento de interacción con el Usuario-->
+    <div class="container bg-warning border border-dark mb-3">
+    <ul>
+        <li>Primer item.</li>
+        <li>Segundo item.</li>
+        <li>Tercer item.</li>
+        <li>Cuarto item.</li>
+        </ul>
+        <p>
+          <input type="button" id="boton1" value="Eliminar la lista completa.">
+          <br>
+          <input type="button" id="boton2" value="Restaurar Lista"><br>
+          <input type="button" id="boton3" value="Añadir un elemento al final de la lista"><br>
+          <input type="button" id="boton4" value="Añadir un elemento al principio de la lista"><br>
+          <input type="button" id="boton5" value="Eliminar el último elemento."><br>
+          <input type="button" id="boton6" value="Eliminar el primer elemento."><br>
+          <input type="button" id="boton7" value="Decorar colores alternos"><br>
+        </p>
+    </div>
+    <!--Código JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+    //Asignamos el evento onclick a los botones
+        $("#boton1").click(eliminarElementos);
+        $("#boton2").click(restaurarLista);
+        $("#boton3").click(anadirElementoFinal);
+        $("#boton4").click(anadirElementoPrincipio);
+        $("#boton5").click(eliminarElementoFinal);
+        $("#boton6").click(eliminarElementoPrincipio);
+        $("#boton7").click(decorar);
+      });
+      function eliminarElementos() {
+          //Seleccionamos los elementos ul y los declaramos vacios
+          //como solo tenemos una etiqueta ul (una lista), no hay problema, ¡¡pero si hubiese más hay que tener cuidado!!
+        $("ul").empty();
+      }
+      function restaurarLista() {
+          //Cambiamos el código html de las etiquetas ul por la lista que teniamos al principio, preescrita a mano
+        $("ul").html(
+          "<li>Primer item.</li><li>Segundo item.</li><li>Tercer item.</li><li>Cuarto item.</li>"
+        );
+      }
+      function anadirElementoFinal() {
+          //el método .append nos permite añadir texto con etiquetas html al final del contenido de la etiqueta/s que seleccionemos
+        $("ul").append("<li>otro item al final</li>");
+      }
+      function anadirElementoPrincipio() {
+          //el método .prepend nos permite añadir texto con etiquetas html al principio del contenido de la etiqueta/s que seleccionemos
+        $("ul").prepend("<li>otro item al principio</li>");
+      }
+      function eliminarElementoFinal() {
+        var y;
+        var cantidad = $("li").length; //recogemos la cantidad de etiquetas li hay (si tuviesemos más listas, tendriamos que especificar mejor aqui)
+        y = $("li").eq(cantidad - 1); //el índice de la última es la cantidad -1 porque empieza a contar por 0
+        y.remove(); //ahora que hemos localizado la última, la borramos
+        //también se podría hacer con $(li:last-child)
+        //$("li:last-child").remove();
+      }
+      function eliminarElementoPrincipio() {
+        $("li").eq(0).remove(); //seleccionamos el elemento li con el índice 0 y lo eliminamos
+        //también funcionaría: $('li:first-child').remove();
+      }
+      function decorar() {
+          //Le cambia el estilo background-color de su css por el color #eee a los elementos li pares
+        $("li:odd").css("background-color", "#eee");
+        //Le cambia el estilo background-color de su css por el color #ccc a los elementos li impares
+        $("li:even").css("background-color", "#ccc");
+      }
+    </script>
+    <!--Bloque de Código Visible-->
+    <div class="container bg-dark border border-secondary text-white  mb-3">
+      <code>
+        &lt;script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;<br />
+        &lt;script type="text/javascript"><br />
+        $(function() {<br />
+            <span class='text-success'>//Asignamos el evento onclick a los botones<br /></span>
+            &nbsp;&nbsp;&nbsp;$("#boton1").click(eliminarElementos);<br />
+            &nbsp;&nbsp;&nbsp;$("#boton2").click(restaurarLista);<br />
+            &nbsp;&nbsp;&nbsp;$("#boton3").click(anadirElementoFinal);<br />
+            &nbsp;&nbsp;&nbsp;$("#boton4").click(anadirElementoPrincipio);<br />
+            &nbsp;&nbsp;&nbsp;$("#boton5").click(eliminarElementoFinal);<br />
+            &nbsp;&nbsp;&nbsp;$("#boton6").click(eliminarElementoPrincipio);<br />
+            &nbsp;&nbsp;&nbsp;$("#boton7").click(decorar);<br />
+              });<br />
+              function eliminarElementos() {<br />
+                <span class='text-success'>//Seleccionamos los elementos ul y los declaramos vacios<br />
+                  //como solo tenemos una etiqueta ul (una lista), no hay problema, ¡¡pero si hubiese más hay que tener cuidado!!<br /></span>
+                  &nbsp;&nbsp;&nbsp;$("ul").empty();<br />
+              }<br />
+              function restaurarLista() {<br />
+                <span class='text-success'>//Cambiamos el código html de las etiquetas ul por la lista que teniamos al principio, preescrita a mano<br /></span>
+                  &nbsp;&nbsp;&nbsp;$("ul").html(<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"&lt;li&gt;Primer item.&lt;/li&gt;&lt;li&gt;Segundo item.&lt;/li&gt;&lt;li&gt;Tercer item.&lt;/li&gt;&lt;li&gt;Cuarto item.&lt;/li&gt;"<br />
+                    &nbsp;&nbsp;&nbsp;);<br />
+              }<br />
+              function anadirElementoFinal() {<br />
+                <span class='text-success'>//el método .append nos permite añadir texto con etiquetas html al final del contenido de la etiqueta/s que seleccionemos<br /></span>
+                  &nbsp;&nbsp;&nbsp;$("ul").append("&lt;li&gt;otro item al final&lt;/li&gt;");<br />
+              }<br />
+              function anadirElementoPrincipio() {<br />
+                <span class='text-success'>//el método .prepend nos permite añadir texto con etiquetas html al principio del contenido de la etiqueta/s que seleccionemos<br /></span>
+                  &nbsp;&nbsp;&nbsp;$("ul").prepend("&lt;li&gt;otro item al principio&lt;/li&gt;");<br />
+              }<br />
+              function eliminarElementoFinal() {<br />
+                &nbsp;&nbsp;&nbsp;var y;<br />
+                &nbsp;&nbsp;&nbsp;var cantidad = $("li").length; <span class='text-success'>//recogemos la cantidad de etiquetas li hay (si tuviesemos más listas, tendriamos que especificar mejor aqui)<br /></span>
+                &nbsp;&nbsp;&nbsp;y = $("li").eq(cantidad - 1); <span class='text-success'>//el índice de la última es la cantidad -1 porque empieza a contar por 0<br /></span>
+                &nbsp;&nbsp;&nbsp;y.remove(); <span class='text-success'>//ahora que hemos localizado la última, la borramos<br />
+                //también se podría hacer con $(li:last-child)<br />
+                //$("li:last-child").remove();<br /></span>
+              }<br />
+              function eliminarElementoPrincipio() {<br />
+                &nbsp;&nbsp;&nbsp;$("li").eq(0).remove(); <span class='text-success'>//seleccionamos el elemento li con el índice 0 y lo eliminamos<br />
+                //también funcionaría: $('li:first-child').remove();<br /></span>
+              }<br />
+              function decorar() {<br />
+                <span class='text-success'>//Le cambia el estilo background-color de su css por el color #eee a los elementos li pares<br /></span>
+                  &nbsp;&nbsp;&nbsp;$("li:odd").css("background-color", "#eee");<br />
+                  <span class='text-success'>//Le cambia el estilo background-color de su css por el color #ccc a los elementos li impares<br /></span>
+                &nbsp;&nbsp;&nbsp;$("li:even").css("background-color", "#ccc");<br />
+              }<br />
+        &lt;/script&gt;
+      </code>
+    </div>
+  </body>
 </html>
