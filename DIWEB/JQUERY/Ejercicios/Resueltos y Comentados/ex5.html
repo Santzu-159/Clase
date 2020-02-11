@@ -4,9 +4,13 @@
         <title>Ejercicio 5</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous">
     </head>
     <body style="background-color: mediumspringgreen;">
+        <!--!!NO TE ASUSTES!! es mucho código pero es todo bien sencillo-->
 
         <!--Librería necesaria para los ejercicios-->
         <div class="container mt-3 text-center">
@@ -15,31 +19,242 @@
         </div>
 
         <!--Enunciado-->
-        <div class="container bg-info border border-dark jumbotron jumbotron-fluid">
+        <div class="container bg-info border border-dark jumbotron
+            jumbotron-fluid">
             <div class="container">
-              <h1 class="display-5">¿Qué solución aporta este ejercicio?</h1>
-              <p class="lead">Enunciado.</p>
+                <h1 class="display-5">¿Qué solución aporta este ejercicio?</h1>
+                <p class="lead">Ejemplo donde podemos ver las diferencias entre .text(), .val(), .html() y .attr().</p>
             </div>
-          </div>
+        </div>
 
         <!--Elemento de interacción con el Usuario-->
-        
+        <div class="container bg-warning mb-4">
+        <div id="capa">Contenido de una capa con id <strong>#capa</strong></div>
+        <p>
+            <input name="cuadro" type="text" id="cuadro" value="valor">
+        </p>
+        <table>
+            <tr>
+                <td>RECUPERANDO LA INFORMACIÓN DE LA CAPA:</td>
+                <td width="350px" class='text-center'>
+                    <input type="button" name="text" id="text" value="text">
+            <input type="button" name="val" id="val" value="val">
+            <input type="button" name="html" id="html" value="html">
+            <input type="button" name="attr" id="attr" value="attr">
+                </td>
+            </tr>
+            <tr>
+                <td>RECUPERANDO LA INFORMACIÓN DEL CUADRO DE TEXTO:</td>
+                <td class='text-center'>
+                    <input type="button" name="text2" id="text2" value="text">
+                    <input type="button" name="val2" id="val2" value="val">
+                    <input type="button" name="html2" id="html2" value="html">
+                    <input type="button" name="attr2" id="attr2" value="attr">
+                </td>
+            </tr>
+            <tr>
+                <td>CAMBIANDO LA INFORMACIÓN DE LA CAPA:</td>
+                <td class='text-center'>
+                    <input type="button" name="text3" id="text3" value="text">
+                    <input type="button" name="val3" id="val3" value="val">
+                    <input type="button" name="html3" id="html3" value="html">
+                    <input type="button" name="attr3" id="attr3" value="attr">
+                </td>
+            </tr>
+            <tr>
+                <td>CAMBIANDO LA INFORMACIÓN DEL CUADRO DE TEXTO:</td>
+                <td class='text-center'>
+                    <input type="button" name="text4" id="text4" value="text">
+                    <input type="button" name="val4" id="val4" value="val">
+                    <input type="button" name="html4" id="html4" value="html">
+                    <input type="button" name="attr4" id="attr4" value="attr">
+                </td>
+            </tr>
+        </table>
+        </div>
 
         <!--Código JS-->
         <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript">
-            
-            </script>
+        //-----SE QUE ES MUCHO, PERO ES BIEN SENCILLO-----//
+        //Se le asigna la función onclick a cada boton con su respectiva función
+        $(function() {
+            $("#html").click(fhtml);
+            $("#val").click(fval);
+            $("#text").click(ftext);
+            $("#attr").click(fattr);
+            $("#html2").click(fhtml2);
+            $("#val2").click(fval2);
+            $("#text2").click(ftext2);
+            $("#attr2").click(fattr2);
+            $("#html3").click(fhtml3);
+            $("#val3").click(fval3);
+            $("#text3").click(ftext3);
+            $("#attr3").click(fattr3);
+            $("#html4").click(fhtml4);
+            $("#val4").click(fval4);
+            $("#text4").click(ftext4);
+            $("#attr4").click(fattr4);
+        })
+        //------------------------------------------------------------//
+        //------ALERTS DEL ELEMENTO CON EL ID capa (div)
+        function fhtml()
+        //Muestra en un alert el código html dentro de la etiqueta con el id #capa
+            {alert($("#capa").html());}
+        function ftext()
+        //Muestra en un alert el texto dentro de la etiqueta con el id #capa
+            {alert($("#capa").text());}
+        function fval()
+        /*Mostraría el valor de la etiqueta con el id #capa, pero este no existe
+        por lo que no muestra nada*/
+            {alert($("#capa").val());}
+        function fattr()
+        /*Muestra en un alert el valor del atributo id de la etiqueta con el id #capa
+        quizás no sea el mejor ejemplo...*/
+            {alert($("#capa").attr("id"));}
+        //------------------------------------------------------------//
+        //------ALERTS DEL ELEMENTO CON EL ID cuadro (input [type="text"])
+        function fhtml2()
+        /*Mostraría el texto, con etiquetas html, dentro de la etiqueta,
+        pero al ser un input, la etiqueta no lleva texto*/
+            {alert($("#cuadro").html());}
+        function ftext2()
+        /*Mostraría el texto dentro de la etiqueta, pero al ser un input,
+        la etiqueta no lleva texto*/
+            {alert($("#cuadro").text());}
+        function fval2()
+        //Muestra en un alert el valor actual de la etiqueta (el texto dentro del input vamos)
+            {alert($("#cuadro").val());}
+        function fattr2()
+        /*Muestra en un alert el valor del atributo value de la etiqueta
+        no importa si se cambia el texto dentro de la caja, devolverá el valor inicial del atributo value*/
+            {alert($("#cuadro").attr("value"));}
+        //------------------------------------------------------------//
+        //------CAMBIAR EL CONTENIDO DEL ELEMENTO CON EL ID capa (div)
+        function fhtml3()
+        //Cambia el código html dentro de la etiqueta con el id capa por "<b>Nuevo</b> Contenido html"
+            {$("#capa").html("<b>Nuevo</b> Contenido html");}
+        function ftext3()
+        //Cambia el texto de la etiqueta con el id capa por "Nuevo texto"
+            {$("#capa").text("Nuevo texto");}
+        function fval3()
+        //Cambiaría el valor de la etiqueta, pero al no ser una etiqueta de formulario, no posee tal caracteristica
+            {$("#capa").val("Nuevo valor");}
+        function fattr3()
+        //Cambia el valor del atributo id por Nuevoid, trás esto las demás funciones de #capa dejan de funcionar
+        //es debido a que todas buscan un elemento con el id capa, pero al cambiar este valor ya no existe ninguno con ese id
+            {$("#capa").attr("id","Nuevoid");}
+        //------------------------------------------------------------//
+        //------CAMBIAR EL CONTENIDO DEL ELEMENTO CON EL ID cuadro (input [type="text"])
+        function fhtml4()
+        //Cambiaría el código html de la etiqueta, pero al ser un campo de formulario, no contiene texto
+            {$("#cuadro").html("<b>Nuevo</b> Contenido html");}
+        function ftext4()
+        //Cambiaría el texto de la etiqueta, pero al ser un campo de formulario, no contiene texto
+            {$("#cuadro").text("Nuevo texto");}
+        function fval4()
+        //Cambia el contenido (valor) del cuadro de texto por "Nuevo valor"
+            {$("#cuadro").val("Nuevo valor");}
+        function fattr4()
+        //Cambia el valor del atributo value por "Nuevo valor atributo"
+        //(Los cambios no se reflejan para el usuario, el texto dentro de la caja no varia)
+            {$("#cuadro").attr("value","Nuevo valor atributo");}
+        //------------------------------------------------------------//
+        </script>
         <!--Bloque de Código Visible-->
-        <div class="container bg-dark border border-secondary text-white  mb-3">
+        <div class="container bg-dark border border-secondary text-white mb-3">
             <code>
-                    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;<br>
-                    &lt;script type="text/javascript"><br>
-            
+                &lt;script
+                src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;<br>
+                &lt;script type="text/javascript"&gt;<br>
+                <span class='text-success'>//-----SE QUE ES MUCHO, PERO ES BIEN SENCILLO-----//<br>
+                //Se le asigna la función onclick a cada boton con su respectiva función<br></span>
+                $(function() {<br>
+                &nbsp;&nbsp;&nbsp;$("#html").click(fhtml);<br>
+                &nbsp;&nbsp;&nbsp;$("#val").click(fval);<br>
+                &nbsp;&nbsp;&nbsp;$("#text").click(ftext);<br>
+                &nbsp;&nbsp;&nbsp;$("#attr").click(fattr);<br>
+                &nbsp;&nbsp;&nbsp;$("#html2").click(fhtml2);<br>
+                &nbsp;&nbsp;&nbsp;$("#val2").click(fval2);<br>
+                &nbsp;&nbsp;&nbsp;$("#text2").click(ftext2);<br>
+                &nbsp;&nbsp;&nbsp;$("#attr2").click(fattr2);<br>
+                &nbsp;&nbsp;&nbsp;$("#html3").click(fhtml3);<br>
+                &nbsp;&nbsp;&nbsp;$("#val3").click(fval3);<br>
+                &nbsp;&nbsp;&nbsp;$("#text3").click(ftext3);<br>
+                &nbsp;&nbsp;&nbsp;$("#attr3").click(fattr3);<br>
+                &nbsp;&nbsp;&nbsp;$("#html4").click(fhtml4);<br>
+                &nbsp;&nbsp;&nbsp;$("#val4").click(fval4);<br>
+                &nbsp;&nbsp;&nbsp;$("#text4").click(ftext4);<br>
+                &nbsp;&nbsp;&nbsp;$("#attr4").click(fattr4);<br>
+                })<br>
+                <span class='text-success'>//------------------------------------------------------------//<br>
+                //------ALERTS DEL ELEMENTO CON EL ID capa (div)<br></span>
+                function fhtml()<br>
+                <span class='text-success'>//Muestra en un alert el código html dentro de la etiqueta con el id #capa<br></span>
+                &nbsp;&nbsp;&nbsp;{alert($("#capa").html());}<br>
+                function ftext()<br>
+                <span class='text-success'>//Muestra en un alert el texto dentro de la etiqueta con el id #capa<br></span>
+                &nbsp;&nbsp;&nbsp;{alert($("#capa").text());}<br>
+                function fval()<br>
+                <span class='text-success'>/*Mostraría el valor de la etiqueta con el id #capa, pero este no existe<br>
+                por lo que no muestra nada*/<br></span>
+                &nbsp;&nbsp;&nbsp;{alert($("#capa").val());}<br>
+                function fattr()<br>
+                <span class='text-success'>/*Muestra en un alert el valor del atributo id de la etiqueta con el id #capa<br>
+                quizás no sea el mejor ejemplo...*/<br></span>
+                &nbsp;&nbsp;&nbsp;{alert($("#capa").attr("id"));}<br>
+                <span class='text-success'>//------------------------------------------------------------//<br>
+                //------ALERTS DEL ELEMENTO CON EL ID cuadro (input [type="text"])<br></span>
+                function fhtml2()<br>
+                <span class='text-success'>/*Mostraría el texto, con etiquetas html, dentro de la etiqueta,<br>
+                pero al ser un input, la etiqueta no lleva texto*/<br></span>
+                &nbsp;&nbsp;&nbsp;{alert($("#cuadro").html());}<br>
+                function ftext2()<br>
+                <span class='text-success'>/*Mostraría el texto dentro de la etiqueta, pero al ser un input,<br>
+                la etiqueta no lleva texto*/<br></span>
+                &nbsp;&nbsp;&nbsp;{alert($("#cuadro").text());}<br>
+                function fval2()<br>
+                <span class='text-success'>//Muestra en un alert el valor actual de la etiqueta (el texto dentro del input vamos)<br></span>
+                &nbsp;&nbsp;&nbsp;{alert($("#cuadro").val());}<br>
+                function fattr2()<br>
+                <span class='text-success'>/*Muestra en un alert el valor del atributo value de la etiqueta<br>
+                no importa si se cambia el texto dentro de la caja, devolverá el valor inicial del atributo value*/<br></span>
+                &nbsp;&nbsp;&nbsp;{alert($("#cuadro").attr("value"));}<br>
+                <span class='text-success'>//------------------------------------------------------------//<br>
+                //------CAMBIAR EL CONTENIDO DEL ELEMENTO CON EL ID capa (div)<br></span>
+                function fhtml3()<br>
+                <span class='text-success'>//Cambia el código html dentro de la etiqueta con el id capa por "<b>Nuevo</b> Contenido html"<br></span>
+                &nbsp;&nbsp;&nbsp;{$("#capa").html("<b>Nuevo</b> Contenido html");}<br>
+                function ftext3()<br>
+                <span class='text-success'>//Cambia el texto de la etiqueta con el id capa por "Nuevo texto"<br></span>
+                &nbsp;&nbsp;&nbsp;{$("#capa").text("Nuevo texto");}<br>
+                function fval3()<br>
+                <span class='text-success'>//Cambiaría el valor de la etiqueta, pero al no ser una etiqueta de formulario, no posee tal caracteristica<br></span>
+                &nbsp;&nbsp;&nbsp;{$("#capa").val("Nuevo valor");}<br>
+                function fattr3()<br>
+                <span class='text-success'>//Cambia el valor del atributo id por Nuevoid, trás esto las demás funciones de #capa dejan de funcionar<br>
+                //es debido a que todas buscan un elemento con el id capa, pero al cambiar este valor ya no existe ninguno con ese id<br></span>
+                &nbsp;&nbsp;&nbsp;{$("#capa").attr("id","Nuevoid");}<br>
+                <span class='text-success'>//------------------------------------------------------------//<br>
+                //------CAMBIAR EL CONTENIDO DEL ELEMENTO CON EL ID cuadro (input [type="text"])<br></span>
+                function fhtml4()<br>
+                <span class='text-success'>//Cambiaría el código html de la etiqueta, pero al ser un campo de formulario, no contiene texto<br></span>
+                &nbsp;&nbsp;&nbsp;{$("#cuadro").html("<b>Nuevo</b> Contenido html");}<br>
+                function ftext4()<br>
+                <span class='text-success'>//Cambiaría el texto de la etiqueta, pero al ser un campo de formulario, no contiene texto<br></span>
+                &nbsp;&nbsp;&nbsp;{$("#cuadro").text("Nuevo texto");}<br>
+                function fval4()<br>
+                <span class='text-success'>//Cambia el contenido (valor) del cuadro de texto por "Nuevo valor"<br></span>
+                &nbsp;&nbsp;&nbsp;{$("#cuadro").val("Nuevo valor");}<br>
+                function fattr4()<br>
+                <span class='text-success'>//Cambia el valor del atributo value por "Nuevo valor atributo"<br>
+                //(Los cambios no se reflejan para el usuario, el texto dentro de la caja no varia)<br></span>
+                &nbsp;&nbsp;&nbsp;{$("#cuadro").attr("value","Nuevo valor atributo");}<br>
+                <span class='text-success'>//------------------------------------------------------------//<br></span>
                 &lt;/script&gt;
-                </code>
+            </code>
         </div>
-    
+
     </body>
 </html>
