@@ -6,6 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
+    <!--Estilo propio-->
+    <style>
+        .box{
+            background-color: sandybrown;
+            color: #fff;
+            border: 3px solid black;
+        }
+        .otherClass{ /*lo se, me falta imaginación*/
+            letter-spacing: 0.3em;
+            font-size: small;
+        }
+    </style>
     <body style="background-color: mediumspringgreen;">
 
         <!--Librería necesaria para los ejercicios-->
@@ -17,26 +29,65 @@
         <!--Enunciado-->
         <div class="container bg-info border border-dark jumbotron jumbotron-fluid">
             <div class="container">
-              <h1 class="display-5">¿Qué solución aporta este ejercicio?</h1>
-              <p class="lead">Enunciado.</p>
+            <h1 class="display-5">¿Qué solución aporta este ejercicio?</h1>
+            <p class="lead">Enunciado.</p>
             </div>
-          </div>
+        </div>
 
         <!--Elemento de interacción con el Usuario-->
-        
+        <h1 class='container text-center mb-3 box'>Cambia mi clase o((&gt;ω&lt;))o</h1>
 
         <!--Código JS-->
         <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript">
-            
+            $(function(){
+                $("h1.box, h1.otherClass").dblclick(changeClass);
+            })
+            function changeClass(){
+                if($(this).hasClass("box")){
+                    $(this).removeClass("box").addClass("otherClass");
+                }else{
+                    $(this).removeClass("otherClass").addClass("box");
+                }
+            }
             </script>
         <!--Bloque de Código Visible-->
         <div class="container bg-dark border border-secondary text-white  mb-3">
+            <h1>Código CSS</h1>
             <code>
-                    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;<br>
-                    &lt;script type="text/javascript"><br>
-            
+                &lt;style&gt;<br>
+                &nbsp;&nbsp;&nbsp;.box{<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: sandybrown;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: #fff;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 3px solid black;<br>
+                &nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;.otherClass{ <span class='text-success'>/*lo se, me falta imaginación*/</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;letter-spacing: 0.3em;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: small;<br>
+                &nbsp;&nbsp;&nbsp;}<br>
+                &lt;/style&gt;
+                </code>
+        </div>
+        <div class="container bg-dark border border-secondary text-white  mb-3">
+            <code>
+                &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;<br>
+                &lt;script type="text/javascript"&gt;<br>
+                $(function(){<br>
+                <span class='text-success'>//Seleccionamos las etiquetas &lt;h1&gt; con la clase "box" o la clase "otherClass"</span><br>
+                <span class='text-success'>//y le asignamos el evento dblclick que se ejecuta al hacer doble click sobre el elemento.</span><br>
+                &nbsp;&nbsp;&nbsp;$("h1.box, h1.otherClass").dblclick(changeClass);<br>
+                })<br>
+                function changeClass(){<br>
+                <span class='text-success'>/*Si el elemento con el que se llama al método tiene la clase "box",<br>
+                    le quita la clase "box" y le añade la clase "otherClass"*/</span><br>
+                &nbsp;&nbsp;&nbsp;if($(this).hasClass("box")){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).removeClass("box").addClass("otherClass");<br>
+                &nbsp;&nbsp;&nbsp;}else{<br>
+                <span class='text-success'>//En caso contrario, la clase es "otherClass", se le quita dicha clase y se le añade la clase "box"</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).removeClass("otherClass").addClass("box");<br>
+                &nbsp;&nbsp;&nbsp;}<br>
+                }<br>
                 &lt;/script&gt;
                 </code>
         </div>
