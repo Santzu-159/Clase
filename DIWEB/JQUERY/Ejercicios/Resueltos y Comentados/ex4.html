@@ -1,45 +1,250 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Ejercicio 4</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    </head>
-    <body style="background-color: mediumspringgreen;">
+  <head>
+    <title>Ejercicio 4</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style type="text/css">
+      #titulo {
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        border-bottom-style: solid;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 16px;
+        border-top-color: #990;
+        border-right-color: #990;
+        border-bottom-color: #990;
+        border-left-color: #990;
+        color: #090;
+      }
+    </style>
+  </head>
+  <body style="background-color: mediumspringgreen;">
+    <!--Librería necesaria para los ejercicios-->
+    <div class="container mt-3 text-center">
+      <h1>Librería de Google</h1>
+      <h3>
+        <span class="badge badge-secondary"
+          >https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js</span
+        >
+      </h3>
+    </div>
 
-        <!--Librería necesaria para los ejercicios-->
-        <div class="container mt-3 text-center">
-            <h1>Librería de Google</h1>
-            <h3><span class="badge badge-secondary">https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js</span></h3>
-        </div>
+    <!--Enunciado-->
+    <div class="container bg-info border border-dark jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-5">¿Qué solución aporta este ejercicio?</h1>
+        <p class="lead">Enunciado.</p>
+      </div>
+    </div>
 
-        <!--Enunciado-->
-        <div class="container bg-info border border-dark jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-5">¿Qué solución aporta este ejercicio?</h1>
-              <p class="lead">Enunciado.</p>
-            </div>
-          </div>
+    <!--Elemento de interacción con el Usuario-->
+    <div class="container bg-warning border border-dark mb-3">
+      <h2 id="titulo">Efectos visuales</h2>
+      <p>
+        <input type="button" name="ver1" id="ver1" value="Ver" />
+        <input type="button" name="ocultar1" id="ocultar1" value="Ocultar" />
+        <input type="button" name="ver2" id="ver2" value="Ver" />
+        <input type="button" name="ocultar2" id="ocultar2" value="Ocultar" />
+        <input type="button" name="ver3" id="ver3" value="Ver al 100%" />
+        <input
+          type="button"
+          name="ocultar3"
+          id="ocultar3"
+          value="Transparente al 50%"
+        />
+        <input
+          type="button"
+          name="verocultar"
+          id="verocultar"
+          value="Ocultar o Ver"
+        />
+        <input type="button" name="animar" id="animar" value="animar titulo" />
+      </p>
 
-        <!--Elemento de interacción con el Usuario-->
-        
+      <table width="80%" border="1" align="center" id="tabla">
+        <tr>
+          <td class="bg-info">&nbsp;</td>
+          <td class="bg-info">&nbsp;</td>
+          <td class="bg-info">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="bg-info">&nbsp;</td>
+          <td class="bg-info">&nbsp;</td>
+          <td class="bg-info">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="bg-info">&nbsp;</td>
+          <td class="bg-info">&nbsp;</td>
+          <td class="bg-info">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="bg-info">&nbsp;</td>
+          <td class="bg-info">&nbsp;</td>
+          <td class="bg-info">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="bg-info">&nbsp;</td>
+          <td class="bg-info">&nbsp;</td>
+          <td class="bg-info">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="bg-info">&nbsp;</td>
+          <td class="bg-info">&nbsp;</td>
+          <td class="bg-info">&nbsp;</td>
+        </tr>
+      </table>
 
-        <!--Código JS-->
-        <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            
-            </script>
-        <!--Bloque de Código Visible-->
-        <div class="container bg-dark border border-secondary text-white  mb-3">
-            <code>
-                    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;<br>
-                    &lt;script type="text/javascript"><br>
-            
-                &lt;/script&gt;
-                </code>
-        </div>
-    
-    </body>
+      <br />
+    </div>
+
+    <!--Código JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $("#ver1").click(ver1);
+        $("#ocultar1").click(ocultar1);
+        $("#ver2").click(ver2);
+        $("#ocultar2").click(ocultar2);
+        $("#ver3").click(ver3);
+        $("#ocultar3").click(ocultar3);
+        $("#verocultar").click(verOcultar);
+        $("#animar").click(animar);
+      })
+      function ver1() {
+          //muestra la tabla de forma rápida, en unos 200 milisegundos
+        $("#tabla").show("fast");
+      }
+      function ocultar1() {
+          //oculta la tabla de forma lenta, en unos 600 milisegundos
+        $("#tabla").hide("slow");
+      }
+      function ver2() {
+          /*muestra la tabla de forma rápida, en unos 200 milisegundos
+          utiliza la animacion fade que da un efecto de desvanecerse*/
+        $("#tabla").fadeIn("fast");
+      }
+      function ocultar2() {
+          /*oculta la tabla de forma lenta, en unos 600 milisegundos
+          utiliza la animacion fade que da un efecto de desvanecerse*/
+        $("#tabla").fadeOut("slow");
+      }
+      function ver3() {
+          /*muestra la tabla de forma lenta, en unos 600 milisegundos
+          utiliza la animacion fade que da un efecto de desvanecerse
+          el segundo parámetro indica la opacidad, 1 significa una opacidad del 100%*/
+        $("#tabla").fadeTo("slow", 1);
+      }
+      function ocultar3() {
+          /*muestra la tabla de forma lenta, en unos 600 milisegundos
+          utiliza la animacion fade que da un efecto de desvanecerse
+          el segundo parámetro indica la opacidad, 0.5 significa una opacidad del 50%*/
+        $("#tabla").fadeTo("slow", 0.5);
+      }
+      function verOcultar(){
+          /*El método toggle oculta o muestra el elemento
+          el parámetro slow indica que queremos que la animación sea lenta, de unos 600 milisegundos*/
+        $("#tabla").toggle("slow");
+      }
+      function animar() {
+          /*crea una animación, parecida a la que usabamos en CSS con transition
+          agranda el tamaño de la letra y el tamaño del borde inferior*/
+        $("#titulo").animate({
+          "border-bottom-width": "20",
+          "font-size": "25pt"
+        });
+      }
+    </script>
+    <!--Bloque de Código Visible-->
+    <div class="container bg-dark border border-secondary text-white mb-3">
+        <h1>Código CSS</h1>
+        <code>
+            &lt;style type="text/css"&gt;<br>
+            &nbsp;&nbsp;&nbsp;#titulo {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-top-width: 1px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-right-width: 1px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-bottom-width: 1px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-left-width: 1px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-bottom-style: solid;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-family: Verdana, Geneva, sans-serif;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: 16px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-top-color: #990;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-right-color: #990;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-bottom-color: #990;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-left-color: #990;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: #090;<br>
+            &nbsp;&nbsp;&nbsp;}<br>
+            &lt;/style&gt;
+            </code>
+    </div>
+    <div class="container bg-dark border border-secondary text-white  mb-3">
+      <code>
+        &lt;script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;<br />
+        &lt;script type="text/javascript"&gt;<br />
+        $(function() {<br />
+            &nbsp;&nbsp;&nbsp;$("#ver1").click(ver1);<br />
+            &nbsp;&nbsp;&nbsp;$("#ocultar1").click(ocultar1);<br />
+            &nbsp;&nbsp;&nbsp;$("#ver2").click(ver2);<br />
+            &nbsp;&nbsp;&nbsp;$("#ocultar2").click(ocultar2);<br />
+            &nbsp;&nbsp;&nbsp;$("#ver3").click(ver3);<br />
+            &nbsp;&nbsp;&nbsp;$("#ocultar3").click(ocultar3);<br />
+            &nbsp;&nbsp;&nbsp;$("#verocultar").click(verOcultar);<br />
+            &nbsp;&nbsp;&nbsp;$("#animar").click(animar);<br />
+          })<br />
+          function ver1() {<br />
+            <span class='text-success'>//muestra la tabla de forma rápida, en unos 200 milisegundos<br /></span>
+              &nbsp;&nbsp;&nbsp;$("#tabla").show("fast");<br />
+          }<br />
+          function ocultar1() {<br />
+            <span class='text-success'>//oculta la tabla de forma lenta, en unos 600 milisegundos<br /></span>
+              &nbsp;&nbsp;&nbsp;$("#tabla").hide("slow");<br />
+          }<br />
+          function ver2() {<br />
+            <span class='text-success'>/*muestra la tabla de forma rápida, en unos 200 milisegundos<br />
+              utiliza la animacion fade que da un efecto de desvanecerse*/<br /></span>
+              &nbsp;&nbsp;&nbsp;$("#tabla").fadeIn("fast");<br />
+          }<br />
+          function ocultar2() {<br />
+            <span class='text-success'>/*oculta la tabla de forma lenta, en unos 600 milisegundos<br />
+              utiliza la animacion fade que da un efecto de desvanecerse*/<br /></span>
+              &nbsp;&nbsp;&nbsp;$("#tabla").fadeOut("slow");<br />
+          }<br />
+          function ver3() {<br />
+            <span class='text-success'>/*muestra la tabla de forma lenta, en unos 600 milisegundos<br />
+              utiliza la animacion fade que da un efecto de desvanecerse<br />
+              el segundo parámetro indica la opacidad, 1 significa una opacidad del 100%*/<br /></span>
+              &nbsp;&nbsp;&nbsp;$("#tabla").fadeTo("slow", 1);<br />
+          }<br />
+          function ocultar3() {<br />
+            <span class='text-success'>/*muestra la tabla de forma lenta, en unos 600 milisegundos<br />
+              utiliza la animacion fade que da un efecto de desvanecerse<br />
+              el segundo parámetro indica la opacidad, 0.5 significa una opacidad del 50%*/<br /></span>
+              &nbsp;&nbsp;&nbsp;$("#tabla").fadeTo("slow", 0.5);<br />
+          }<br />
+          function verOcultar(){<br />
+            <span class='text-success'>/*El método toggle oculta o muestra el elemento<br />
+              el parámetro slow indica que queremos que la animación sea lenta, de unos 600 milisegundos*/<br /></span>
+              &nbsp;&nbsp;&nbsp;$("#tabla").toggle("slow");<br />
+          }<br />
+          function animar() {<br />
+            <span class='text-success'>/*crea una animación, parecida a la que usabamos en CSS con transition<br />
+              agranda el tamaño de la letra y el tamaño del borde inferior*/<br /></span>
+              &nbsp;&nbsp;&nbsp;$("#titulo").animate({<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"border-bottom-width": "20",<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"font-size": "25pt"<br />
+                &nbsp;&nbsp;&nbsp;});<br />
+                &nbsp;&nbsp;&nbsp;}<br />
+        &lt;/script&gt;
+      </code>
+    </div>
+  </body>
 </html>
