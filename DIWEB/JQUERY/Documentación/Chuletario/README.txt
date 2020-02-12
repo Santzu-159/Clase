@@ -180,6 +180,23 @@ https://api.jquery.com/category/effects/
     https://www.arkaitzgarro.com/jquery/capitulo-6.html
     https://juanda.gitbooks.io/webapps/content/jQuery/efectos.html
 <-- # ACCESO RÁPIDO # -->
+· animate() --> Ejecuta una animación personalizada en los elementos seleccionados
+· clearQueue() --> Elimina todas las funciones en cola restantes de los elementos seleccionados
+· delay() --> Establece un retraso para todas las funciones en cola en los elementos seleccionados
+· dequeue() --> Elimina la siguiente función de la cola y luego ejecuta la función
+· fadeIn() --> Se desvanece en los elementos seleccionados
+· fadeOut() --> Desvanece los elementos seleccionados
+· fadeTo() --> Desvanece / desvanece los elementos seleccionados a una opacidad dada
+· fadeToggle() --> Alterna entre los métodos fadeIn () y fadeOut ()
+· finish() --> Detiene, elimina y completa todas las animaciones en cola para los elementos seleccionados.
+· hide() --> Oculta los elementos seleccionados
+· queue() --> Muestra las funciones en cola en los elementos seleccionados
+· show() --> Muestra los elementos seleccionados
+· slideDown() --> Desliza hacia abajo (muestra) los elementos seleccionados
+· slideToggle() --> Alterna entre los métodos slideUp () y slideDown ()
+· slideUp() --> Desliza hacia arriba (oculta) los elementos seleccionados
+· stop() --> Detiene la animación que se está ejecutando actualmente para los elementos seleccionados
+· toggle() --> Alterna entre los métodos hide () y show ()
 
 <--      -->
 
