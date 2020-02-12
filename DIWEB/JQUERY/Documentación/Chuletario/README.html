@@ -1,0 +1,184 @@
+># Librería de Google:
+https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+
+># Lista de referencias:
+https://www.w3schools.com/jquery/jquery_ref_overview.asp
+
+<SELECTORES>
+<PAGINAS-DE-INTERES>
+https://www.anerbarrena.com/jquery-selectors-selectores-4768/
+https://www.w3schools.com/jquery/jquery_ref_selectors.asp
+https://api.jquery.com/category/selectors/
+</PAGINAS-DE-INTERES>
+<ACCESO-RAPIDO>
+># Para seleccionar un elemento de la página utilizaremos los mismos selectores que en CSS,
+dentro de la etiqueta de DOM de JQuery $("elemento"). //Debemos poner el selector entre !comillas! dentro de los paréntesis.
+># Selectores a destacar:
+//Básicos no incluidos en este chuletario
+<posicion>
+· :first --> $("p:first") --> El primero elemento <p>
+· :last --> $("p:last") --> El último elemento <p>
+· :even --> $("tr:even") --> Todos los elementos <tr> pares
+· :odd --> $("tr:odd") --> Todos los elementos <tr> impares
+</posicion>
+<hijos>
+· :first-child --> $("p:first-child") --> Todos los elementos <p> que son el primer hijo de su padre
+· :first-of-type --> $("p:first-of-type") --> Todos los elementos <p> que son el primer elemento <p> de su padre
+· :last-child --> $("p:last-child") --> Todos los elementos <p> que son el último hijo de su padre
+· :last-of-type --> $("p:last-of-type") --> Todos los elementos <p> que son el último elemento <p> de su padre
+· :nth-child(n) --> $("p:nth-child(2)") --> Todos los elementos <p> que son el segundo hijo de su padre
+· :nth-last-child(n) --> $("p:nth-last-child(2)") --> Todos los elementos <p> que son el segundo hijo de su padre, contando desde el último hijo
+· :nth-of-type(n) --> $("p:nth-of-type(2)") --> Todos los elementos <p> que son el segundo elemento <p> de su padre
+· :nth-last-of-type(n) --> $("p:nth-last-of-type(2)") --> Todos los elementos <p> que son el segundo elemento <p> de su padre, contando desde el último hijo
+· :only-child --> $("p:only-child") --> Todos los elementos <p> que son el único hijo de su padre
+· :only-of-type --> $("p:only-of-type") --> Todos los elementos <p> que son el único hijo, de su tipo, de su padre
+</hijos>
+//descendientes y hermanos no incluidos en este chuletario
+<POR-INDICE-Y-EL-NOT>
+· :eq(index) --> $("ul li:eq(3)") --> El cuarto elemento en una lista (el índice comienza por 0)
+· :gt(no) --> $("ul li:gt(3)") --> Enumerar elementos con un índice mayor que 3
+· :lt(no) --> $("ul li:lt(3)") --> Lista de elementos con un índice inferior a 3
+· :not(selector) --> $("input:not(:empty)") --> Todos los elementos de entrada que no están vacíos
+</POR-INDICE-Y-EL-NOT>
+<MISC-U-OTROS>
+· :header --> $(":header") --> Todos los elementos de encabezado (<h1>,<h2>,..)
+· :animated --> $(":animated") --> Todos los elementos animados
+· :focus --> $(":focus") --> El elemento que actualmente tiene el foco
+· :contains(text) --> $(":contains('Hello')") --> Todos los elementos que contengan el texto "Hola"
+· :has(selector) --> $("div:has(p)") --> Todos los elementos <div> que tienen un elemento <p>
+· :empty --> $(":empty") --> Todos los elementos que están vacíos
+· :parent --> $(":parent") --> Todos los elementos que son padres de otro elemento.
+· :hidden --> $("p:hidden") --> Todos los elementos <p> ocultos
+· :visible --> $("table:visible") --> Todos las tablas visibles
+· :root --> $(":root") --> El elemento raíz del documento
+· :lang(language) --> $("p:lang(de)") --> Todos los elementos <p> con un valor de atributo lang que comienza con "de"
+</MISC-U-OTROS>
+//Atributos no incluidos en este chuletario
+<FORMULARIOS>
+· :input --> $(":input") --> Todos los elementos input (de entrada)
+· :text --> $(":text") --> Todos los input de tipo = "text"
+· :password --> $(":password") --> Todos los input de tipo = "password"
+· :radio --> $(":radio") --> Todos los input de tipo = "radio"
+· :checkbox --> $(":checkbox") --> Todos los input de tipo = "checkbox"
+· :submit --> $(":submit") --> Todos los input de tipo = "submit"
+· :reset --> $(":reset") --> Todos los input de tipo = "reset"
+· :button --> $(":button") --> Todos los input de tipo = "button"
+· :image --> $(":image") --> Todos los input de tipo = "image"
+· :file --> $(":file") --> Todos los input de tipo = "file"
+· :enabled --> $(":enabled") --> Todos los input habilitados
+· :disabled --> $(":disabled") --> Todos los input deshabilitados
+· :selected --> $(":selected") --> Todos los input seleccionados
+· :checked --> $(":checked") --> Todos los input marcados
+</FORMULARIOS>
+</ACCESO-RAPIDO>
+</SELECTORES>
+<!--      -->
+
+<HTML-Y-CSS>
+<PAGINAS-DE-INTERES>
+
+</PAGINAS-DE-INTERES>
+<ACCESO-RAPIDO>
+· addClass() --> Agrega uno o más nombres de clase a los elementos seleccionados
+· after() --> Inserta contenido después de elementos seleccionados
+· append() --> Inserta contenido al final de los elementos seleccionados
+· appendTo() --> Inserta elementos HTML al final de los elementos seleccionados
+· attr() --> Establece o devuelve atributos / valores de elementos seleccionados
+· before() --> Inserta contenido antes de los elementos seleccionados
+· clone() --> Hace una copia de los elementos seleccionados
+· css() --> Establece o devuelve una o más propiedades de estilo para elementos seleccionados
+· detach() --> Elimina elementos seleccionados (mantiene datos y eventos)
+· empty() --> Elimina todos los nodos secundarios y el contenido de los elementos seleccionados
+· hasClass() --> Comprueba si alguno de los elementos seleccionados tiene un nombre de clase especificado
+· height() --> Establece o devuelve la altura de los elementos seleccionados
+· html() --> Establece o devuelve el contenido de los elementos seleccionados.
+· innerHeight() --> Devuelve la altura de un elemento (incluye relleno, pero no borde)
+· innerWidth() --> Devuelve el ancho de un elemento (incluye relleno, pero no borde)
+· insertAfter() --> Inserta elementos HTML después de los elementos seleccionados
+· insertBefore() --> Inserta elementos HTML antes de los elementos seleccionados
+· offset() --> Establece o devuelve las coordenadas de desplazamiento para los elementos seleccionados (en relación con el documento)
+· offsetParent() --> Devuelve el primer elemento primario posicionado
+· outerHeight() --> Devuelve la altura de un elemento (incluye relleno y borde)
+· outerWidth() --> Devuelve el ancho de un elemento (incluye relleno y borde)
+· position() --> Devuelve la posición (relativa al elemento padre) de un elemento
+· prepend() --> Inserta contenido al comienzo de los elementos seleccionados
+· prependTo() --> Inserta elementos HTML al comienzo de los elementos seleccionados
+· prop() --> Establece o devuelve propiedades / valores de elementos seleccionados
+· remove() --> Elimina los elementos seleccionados (incluidos datos y eventos)
+· removeAttr() --> Elimina uno o más atributos de los elementos seleccionados
+· removeClass() --> Elimina una o más clases de los elementos seleccionados
+· removeProp() --> Elimina una propiedad establecida por el método prop()
+· replaceAll() --> Reemplaza los elementos seleccionados con nuevos elementos HTML
+· replaceWith() --> Reemplaza los elementos seleccionados con contenido nuevo
+· scrollLeft() --> Establece o devuelve la posición horizontal de la barra de desplazamiento de los elementos seleccionados
+· scrollTop() --> Establece o devuelve la posición vertical de la barra de desplazamiento de los elementos seleccionados
+· text() --> Establece o devuelve el contenido de texto de los elementos seleccionados.
+· toggleClass() --> Alterna entre agregar / eliminar una o más clases de elementos seleccionados
+· unwrap() --> Elimina el elemento padre de los elementos seleccionados
+· val() --> Establece o devuelve el atributo de valor de los elementos seleccionados (para elementos de formulario)
+· width() --> Establece o devuelve el ancho de los elementos seleccionados
+· wrap() --> Envuelve los elementos HTML alrededor de cada elemento seleccionado
+· wrapAll() --> Envuelve los elementos HTML alrededor de todos los elementos seleccionados
+· wrapInner() --> Envuelve los elementos HTML alrededor del contenido de cada elemento seleccionado
+</ACCESO-RAPIDO>
+</HTML-Y-CSS>
+<!--      -->
+
+<EVENTOS>
+<PAGINAS-DE-INTERES>
+
+</PAGINAS-DE-INTERES>
+
+<ACCESO-RAPIDO>
+
+</ACCESO-RAPIDO>
+<EVENTOS>
+<!--      -->
+
+<EFECTOS>
+<PAGINAS-DE-INTERES>
+    
+</PAGINAS-DE-INTERES>
+
+<ACCESO-RAPIDO>
+    
+</ACCESO-RAPIDO>
+</EFECTOS>
+
+<!--      -->
+
+<TRAVERSING-O-VIAJANDO>
+<PAGINAS-DE-INTERES>
+    
+</PAGINAS-DE-INTERES>
+
+<ACCESO-RAPIDO>
+    
+</ACCESO-RAPIDO>
+</TRAVERSING-O-VIAJANDO>
+
+<!--      -->
+
+<MISC>
+<PAGINAS-DE-INTERES>
+    
+</PAGINAS-DE-INTERES>
+
+<ACCESO-RAPIDO>
+    
+</ACCESO-RAPIDO>
+</MISC>
+
+<!--      -->
+
+<AJAX>
+<PAGINAS-DE-INTERES>
+    
+</PAGINAS-DE-INTERES>
+
+<ACCESO-RAPIDO>
+    
+</ACCESO-RAPIDO>
+</AJAX>
+
+<!--      -->
