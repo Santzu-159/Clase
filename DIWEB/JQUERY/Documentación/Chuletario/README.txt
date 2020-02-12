@@ -6,9 +6,9 @@ https://www.w3schools.com/jquery/jquery_ref_overview.asp
 
 <-- ! SELECTORES ! -->
 <-- # PÁGINAS DE INTERES # -->
-https://www.anerbarrena.com/jquery-selectors-selectores-4768/
 https://www.w3schools.com/jquery/jquery_ref_selectors.asp
 https://api.jquery.com/category/selectors/
+https://www.anerbarrena.com/jquery-selectors-selectores-4768/
 <-- # ACCESO RÁPIDO # -->
 ># Para seleccionar un elemento de la página utilizaremos los mismos selectores que en CSS,
 dentro de la etiqueta de DOM de JQuery $("elemento"). //Debemos poner el selector entre !comillas! dentro de los paréntesis.
@@ -69,7 +69,7 @@ dentro de la etiqueta de DOM de JQuery $("elemento"). //Debemos poner el selecto
 
 <-- ! HTML/CSS ! -->
 <-- # PÁGINAS DE INTERES # -->
-
+https://www.w3schools.com/jquery/jquery_ref_html.asp
 <-- # ACCESO RÁPIDO # -->
 · addClass() --> Agrega uno o más nombres de clase a los elementos seleccionados
 · after() --> Inserta contenido después de elementos seleccionados
@@ -117,35 +117,50 @@ dentro de la etiqueta de DOM de JQuery $("elemento"). //Debemos poner el selecto
 
 <-- ! EVENTOS ! -->
 <-- # PÁGINAS DE INTERES # -->
-
+https://www.w3schools.com/jquery/jquery_ref_events.asp
+https://api.jquery.com/category/events/
+https://aprende-web.net/librerias/jquery/jquery_8.php
+https://www.arkaitzgarro.com/jquery/capitulo-5.html
 <-- # ACCESO RÁPIDO # -->
 
 <--      -->
 
 <-- ! EFECTOS ! -->
 <-- # PÁGINAS DE INTERES # -->
-
+https://www.w3schools.com/jquery/jquery_ref_effects.asp
+https://api.jquery.com/category/effects/
+    https://www.arkaitzgarro.com/jquery/capitulo-6.html
+    https://juanda.gitbooks.io/webapps/content/jQuery/efectos.html
 <-- # ACCESO RÁPIDO # -->
 
 <--      -->
 
 <-- ! TRAVERSING/VIAJANDO ! -->
 <-- # PÁGINAS DE INTERES # -->
-
+https://www.w3schools.com/jquery/jquery_ref_traversing.asp
+https://api.jquery.com/category/traversing/
+https://www.geeksforgeeks.org/jquery-traversing/
 <-- # ACCESO RÁPIDO # -->
 
 <--      -->
 
 <-- ! MISC ! -->
 <-- # PÁGINAS DE INTERES # -->
-
+https://www.w3schools.com/jquery/jquery_ref_misc.asp
+https://api.jquery.com/category/miscellaneous/
 <-- # ACCESO RÁPIDO # -->
 
 <--      -->
 
 <-- ! AJAX ! -->
 <-- # PÁGINAS DE INTERES # -->
-
+https://www.w3schools.com/jquery/jquery_ref_ajax.asp
+https://api.jquery.com/jQuery.ajax/#jQuery-ajax-url-settings
+https://uniwebsidad.com/libros/fundamentos-jquery/capitulo-7/metodos-ajax-de-jquery
+https://www.arkaitzgarro.com/jquery/capitulo-7.html
 <-- # ACCESO RÁPIDO # -->
 
 <--      -->
+
+//Propiedades no se incluye en este chuletario, si quiere saber sobre ellas acceda al siguiente link:
+https://www.w3schools.com/jquery/jquery_ref_prop.asp
