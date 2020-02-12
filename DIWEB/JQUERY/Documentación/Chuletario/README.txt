@@ -206,7 +206,7 @@ https://www.w3schools.com/jquery/jquery_ref_traversing.asp
 https://api.jquery.com/category/traversing/
 https://www.geeksforgeeks.org/jquery-traversing/
 <-- # ACCESO RÁPIDO # -->
-· add () --> Agrega elementos al conjunto de elementos coincidentes
+· add() --> Agrega elementos al conjunto de elementos coincidentes
 · addBack() --> Agrega el conjunto de elementos anterior al conjunto actual
 · children() --> Devuelve todos los hijos directos del elemento seleccionado
 · closest() --> Devuelve el primer ancestro del elemento seleccionado
