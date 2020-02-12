@@ -197,6 +197,15 @@ https://www.geeksforgeeks.org/jquery-traversing/
 https://www.w3schools.com/jquery/jquery_ref_misc.asp
 https://api.jquery.com/category/miscellaneous/
 <-- # ACCESO RÁPIDO # -->
+· data() --> Adjunta datos u obtiene datos de elementos seleccionados
+· each() --> Ejecuta una función para cada elemento coincidente
+· get() --> Obtiene los elementos DOM que coinciden con el selector
+· index() --> Busca un elemento dado entre los elementos coincidentes
+· $.noConflict() --> Libera el control de jQuery de la variable $
+· $.param() --> Crea una representación serializada de una matriz u objeto (puede usarse como cadena de consulta de URL para solicitudes AJAX)
+· removeData() --> Elimina un dato previamente almacenado
+· toArray() --> Recupera todos los elementos DOM contenidos en el conjunto jQuery, como una matriz
+//Se han omitido algunos métodos removidos o deprecated
 
 <--      -->
 
