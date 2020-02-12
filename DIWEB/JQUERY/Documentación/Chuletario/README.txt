@@ -177,8 +177,8 @@ https://www.arkaitzgarro.com/jquery/capitulo-5.html
 <-- # PÁGINAS DE INTERES # -->
 https://www.w3schools.com/jquery/jquery_ref_effects.asp
 https://api.jquery.com/category/effects/
-    https://www.arkaitzgarro.com/jquery/capitulo-6.html
-    https://juanda.gitbooks.io/webapps/content/jQuery/efectos.html
+https://www.arkaitzgarro.com/jquery/capitulo-6.html
+https://juanda.gitbooks.io/webapps/content/jQuery/efectos.html
 <-- # ACCESO RÁPIDO # -->
 · animate() --> Ejecuta una animación personalizada en los elementos seleccionados
 · clearQueue() --> Elimina todas las funciones en cola restantes de los elementos seleccionados
@@ -207,6 +207,7 @@ https://api.jquery.com/category/traversing/
 https://www.geeksforgeeks.org/jquery-traversing/
 <-- # ACCESO RÁPIDO # -->
 
+
 <--      -->
 
 <-- ! MISC ! -->
@@ -233,6 +234,25 @@ https://api.jquery.com/jQuery.ajax/#jQuery-ajax-url-settings
 https://uniwebsidad.com/libros/fundamentos-jquery/capitulo-7/metodos-ajax-de-jquery
 https://www.arkaitzgarro.com/jquery/capitulo-7.html
 <-- # ACCESO RÁPIDO # -->
+· $.ajax() --> Realiza una solicitud asíncrona AJAX
+· $.ajaxPrefilter() --> Maneja las opciones personalizadas de Ajax o modifica las opciones existentes antes de enviar cada solicitud y antes de que sean procesadas por $ .ajax ()
+· $.ajaxSetup() --> Establece los valores predeterminados para futuras solicitudes AJAX
+· $.ajaxTransport() --> Crea un objeto que maneja la transmisión real de datos Ajax
+· $.get() --> Carga datos de un servidor utilizando una solicitud AJAX HTTP GET
+· $.getJSON() --> Carga datos codificados en JSON desde un servidor utilizando una solicitud HTTP GET
+· $.getScript() --> Carga (y ejecuta) un JavaScript desde un servidor utilizando una solicitud AJAX HTTP GET
+· $.param() --> Crea una representación serializada de una matriz u objeto (puede usarse como cadena de consulta de URL para solicitudes AJAX)
+· $.post() --> Carga datos de un servidor utilizando una solicitud POST HTTP AJAX
+· ajaxComplete() --> Especifica una función que se ejecutará cuando se complete la solicitud AJAX
+· ajaxError() --> Especifica una función para ejecutar cuando la solicitud AJAX se completa con un error
+· ajaxSend() --> Especifica una función para ejecutar antes de que se envíe la solicitud AJAX
+· ajaxStart() --> Especifica una función para ejecutar cuando comienza la primera solicitud AJAX
+· ajaxStop() --> Especifica una función para ejecutar cuando se hayan completado todas las solicitudes de AJAX
+· ajaxSuccess() --> Especifica una función para ejecutar cuando una solicitud AJAX se completa con éxito
+· load() --> Carga datos de un servidor y coloca los datos devueltos en el elemento seleccionado
+· serialize() --> Codifica un conjunto de elementos de formulario como una cadena para enviar
+· serializeArray() --> Codifica un conjunto de elementos de formulario como una matriz de nombres y valores
+//Se han omitido algunos métodos removidos o deprecated
 
 <--      -->
 
