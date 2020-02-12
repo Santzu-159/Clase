@@ -71,6 +71,47 @@ dentro de la etiqueta de DOM de JQuery $("elemento"). //Debemos poner el selecto
 <-- # PÁGINAS DE INTERES # -->
 
 <-- # ACCESO RÁPIDO # -->
+· addClass() --> Agrega uno o más nombres de clase a los elementos seleccionados
+· after() --> Inserta contenido después de elementos seleccionados
+· append() --> Inserta contenido al final de los elementos seleccionados
+· appendTo() --> Inserta elementos HTML al final de los elementos seleccionados
+· attr() --> Establece o devuelve atributos / valores de elementos seleccionados
+· before() --> Inserta contenido antes de los elementos seleccionados
+· clone() --> Hace una copia de los elementos seleccionados
+· css() --> Establece o devuelve una o más propiedades de estilo para elementos seleccionados
+· detach() --> Elimina elementos seleccionados (mantiene datos y eventos)
+· empty() --> Elimina todos los nodos secundarios y el contenido de los elementos seleccionados
+· hasClass() --> Comprueba si alguno de los elementos seleccionados tiene un nombre de clase especificado
+· height() --> Establece o devuelve la altura de los elementos seleccionados
+· html() --> Establece o devuelve el contenido de los elementos seleccionados.
+· innerHeight() --> Devuelve la altura de un elemento (incluye relleno, pero no borde)
+· innerWidth() --> Devuelve el ancho de un elemento (incluye relleno, pero no borde)
+· insertAfter() --> Inserta elementos HTML después de los elementos seleccionados
+· insertBefore() --> Inserta elementos HTML antes de los elementos seleccionados
+· offset() --> Establece o devuelve las coordenadas de desplazamiento para los elementos seleccionados (en relación con el documento)
+· offsetParent() --> Devuelve el primer elemento primario posicionado
+· outerHeight() --> Devuelve la altura de un elemento (incluye relleno y borde)
+· outerWidth() --> Devuelve el ancho de un elemento (incluye relleno y borde)
+· position() --> Devuelve la posición (relativa al elemento padre) de un elemento
+· prepend() --> Inserta contenido al comienzo de los elementos seleccionados
+· prependTo() --> Inserta elementos HTML al comienzo de los elementos seleccionados
+· prop() --> Establece o devuelve propiedades / valores de elementos seleccionados
+· remove() --> Elimina los elementos seleccionados (incluidos datos y eventos)
+· removeAttr() --> Elimina uno o más atributos de los elementos seleccionados
+· removeClass() --> Elimina una o más clases de los elementos seleccionados
+· removeProp() --> Elimina una propiedad establecida por el método prop()
+· replaceAll() --> Reemplaza los elementos seleccionados con nuevos elementos HTML
+· replaceWith() --> Reemplaza los elementos seleccionados con contenido nuevo
+· scrollLeft() --> Establece o devuelve la posición horizontal de la barra de desplazamiento de los elementos seleccionados
+· scrollTop() --> Establece o devuelve la posición vertical de la barra de desplazamiento de los elementos seleccionados
+· text() --> Establece o devuelve el contenido de texto de los elementos seleccionados.
+· toggleClass() --> Alterna entre agregar / eliminar una o más clases de elementos seleccionados
+· unwrap() --> Elimina el elemento padre de los elementos seleccionados
+· val() --> Establece o devuelve el atributo de valor de los elementos seleccionados (para elementos de formulario)
+· width() --> Establece o devuelve el ancho de los elementos seleccionados
+· wrap() --> Envuelve los elementos HTML alrededor de cada elemento seleccionado
+· wrapAll() --> Envuelve los elementos HTML alrededor de todos los elementos seleccionados
+· wrapInner() --> Envuelve los elementos HTML alrededor del contenido de cada elemento seleccionado
 
 <--      -->
 
