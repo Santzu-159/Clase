@@ -1,0 +1,1 @@
+Se intentará recopilar y explicar la teoría de este tema.

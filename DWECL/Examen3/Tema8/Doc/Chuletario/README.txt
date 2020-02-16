@@ -1,0 +1,1 @@
+Acceso rápido a información como comandos o métodos de utilidad.

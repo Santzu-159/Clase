@@ -1,0 +1,1 @@
+En el archivo index.html podrás encontrar distintos links de páginas webs y vídeos de youtube que te ayudarán a entender este tema.
