@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ejercicios Propuestos de JQuery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-color: burlywood;">
+
+        <!--Librería necesaria para los ejercicios-->
+        <div class="container mt-3 text-center">
+            <h1>Tema 7</h1>
+            <h3><span class="badge badge-secondary">{Callback, Promises, Asyn/Await, Ajax}</span></h3>
+        </div>
+
+        <!--Ejercicios Resueltos-->
+        <div class="container border border-primary mt-3 jumbotron">
+            <h1 class="display-5">Consultar Ejercicios Resueltos y Comentados:</h1>
+            <p class="lead"><a href="https://github.com/Lobozel/Clase/tree/master/DWECL/Examen3/Tema8/Code/Ejercicios%20Resueltos%20y%20Comentados">https://github.com/Lobozel/Clase/tree/master/DWECL/Examen3/Tema8/Code/Ejercicios%20Resueltos%20y%20Comentados</a></p>
+            <hr class="my-2">
+            <p>¡Puedes mandar un comprimido con los ejercicios realizados a Lobozel para que te los corriga personalmente!</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="https://github.com/Lobozel/Clase/tree/master/DWECL/Examen3/Tema8/Code/Ejercicios%20Resueltos%20y%20Comentados" role="button">Ir al Repositorio</a>
+            </p>
+          </div>
+
+          
+
+    
+        <!--Ejercicios-->
+        <div id="accordion" class='container mb-3'>
+            <!---->
+            <div class="card">
+              <div class="card-header" id="h1">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#ejercicio1" aria-expanded="true" aria-controls="ejercicio1">
+                    Ejercicio 1 | Cookies
+                  </button>
+                </h5>
+              </div>          
+              <div id="ejercicio1" class="collapse show" aria-labelledby="h1" data-parent="#accordion">
+                <div class="card-body">
+                    <!--Enunciado del ejercicio 1-->
+                    Formulario de inicio de sesión, puedes copiarlo de cualquier lado<br>
+                    Crea las constantes para usuario y pass<br>
+                    User: usuario<br>
+                    Pass: User123<br>
+                    Iniciar sesión solo mostrará una alerta que diga 'se ha iniciado sesión'<br>
+                    Añade al formulario un chekbox 'recuerdame', si se inicia sesión con este chekado, se guardará el<br>
+                    usuario y la contraseña en unas cookies y se mostrarán al cargar la página en el formulario<br>
+                    añade un botón para borrar las cookies
+                </div>
+              </div>
+            </div>
+            <!---->
+            <div class="card">
+              <div class="card-header" id="h2">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ejercicio2" aria-expanded="false" aria-controls="ejercicio2">
+                    Ejercicio 2 | Web Storages
+                  </button>
+                </h5>
+              </div>
+              <div id="ejercicio2" class="collapse" aria-labelledby="h2" data-parent="#accordion">
+                <div class="card-body">
+                  <!--Enunciado del ejercicio 2-->
+                  Formulario de inicio de sesión, puedes copiarlo de cualquier lado<br>
+                Crea las constantes para usuario y pass<br>
+                User: usuario<br>
+                Pass: User123<br>
+                Iniciar sesión solo mostrará una alerta que diga 'se ha iniciado sesión'<br>
+                Añade al formulario un chekbox 'recuerdame', si se inicia sesión con este chekado, se guardará el<br>
+                usuario y la contraseña en unas local Web Storages y se mostrarán al cargar la página en el formulario<br>
+                añade un botón para borrar las local Web Storages
+                </div>
+              </div>
+            </div>
+            <!---->
+            <div class="card">
+              <div class="card-header" id="h3">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ejercicio3" aria-expanded="false" aria-controls="ejercicio3">
+                    Ejercicio 3 | IndexedDB
+                  </button>
+                </h5>
+              </div>
+              <div id="ejercicio3" class="collapse" aria-labelledby="h3" data-parent="#accordion">
+                <div class="card-body">
+                  <!--Enunciado del ejercicio 3-->
+                  Diseña un formulario para un coche (Matricula, Modelo, Marca, Color, Kms(numerico))<br>
+                  Matricula, Modelo y Marca son obligatorios<br>
+                  Al pulsar en enviar, estos datos se guardarán en una base de datos indexdb (coches)<br>
+                  Matricula será la clave<br>
+                  Si no se han introducido color, por defecto será blanco, o kms, por defecto será 0<br>
+                  crea también el botón limpiar para restablecer la información<br>
+                  Añade un botón 'mostrar en consola' que muestre toda la información de la base de datos en consola<br>
+                  Añade un botón 'editar', al pulsarlo comprobará el contenido de la caja 'matricula'<br>
+                  si está vacio o no existe esa matricula, mostrará un mensaje de error indicando el motivo<br>
+                  si existe la matricula en la base de datos, cargará la información de dicho vehículo en el resto de los campos
+                </div>
+              </div>
+            </div>            
+          </div>
+
+          <!--Dudas-->
+          <div class="container border border-info jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-5">¿Dudas con los ejercicios, atascado con un problema?</h1>
+              <p class="lead">Si encuentras algún inconveniente a la hora de resolver los ejercicios, ya sea porque no entiendes bien el enunciado o porque no consigues resolver alguna parte de un ejercicio, contacta con Lobozel y te ayudará a solucionar el problema.</p>
+            </div>
+          </div>
+    </body>
+</html>

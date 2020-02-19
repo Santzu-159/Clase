@@ -1,0 +1,144 @@
+Tema7:
+
+Callback
+Fácil:
+Crea 3 funcciones:
+1. Una función que muestre un mensaje en la consola (console.log("mensaje"))
+2. Un mensaje que muestre un mensaje de alerta (alert("mensaje"))
+3. Una función con un parámetro (callback), dentro de la función llama a ese parámetro como si de una función se tratase
+Llama a la tercera función dos veces
+· La primera vez pasaré por parámetro el nombre de la primera función
+· La segunda, pasaré por parámetro el nombre de la segunda función
+Medio:
+Crea una funcción con un callback que permita saber que la ejecución de dicha función ha finalizado.
+Difícil:
+Dentro de la carpeta Resources tendrás los archivos necesarios para esta práctica.
+Modifica el archivo Codigo.js para crear una funcción Callback
+esta función, se llamará en el evento onclick de cada botón, pero dependiendo el botón
+realizará una acción u otra, para lograr esto deberás pasarle por parámetros la funcción correspondiente
+del archivo funciones.js
+------------------------
+Promises
+Fácil:
+Diseña una promesa que muestre un mensaje de alerta después de 3 segúndos.
+Medio:
+Escribe una función usando promesas que reciba un número por parámetro
+si ese número es mayor o igual que 5, muestra una alerta indicando que el usuario ha aprobado
+si el número, por el contrario, es inferior que 5, manda un error con una alerta que diga que ha suspendido
+Para probarlo puedes llamar a la función pasandole por parámetro un número random entre 0 y 10.
+Difícil:
+Escribe dos funciones que usen promesas y encadenalas
+· La primera función, recibirá un array de cadenas lo modificará conviertiendo todas las palabras a mayúsculas
+· Luego, la segunda función, ordenará el array alfabéticamente
+Si el array que se recibe por parámetros contiene uno o más elementos que no sean cadenas, 
+deberá arrojar un error.
+Si todo ha ido bien, muestra por consola el array.
+------------------------
+Asyn/Await
+Fácil:
+Función asincrona en la que se llame a una promesa con un tiempo de espera de 2 segundos
+se esperará a que la promesa termine de ejecutarse y se mostrará el resultado de esta
+Medio:
+Dentro de la carpeta Resources tendrás los archivos necesarios para esta práctica
+Modifica el archivo Codigo.js para crear que funcione de forma asincrona con asyn y await
+Difícil:
+Tenemos un contenedor con una capacidad máxima de 100 litros, invariable, con una 
+capacidad actual random entre 0 y 100 ambos incluidos.
+Para aumentar o disminuir su contenido, necesitamos los siguientes métodos
+· llenar(): [método asincrono] comprueba que el contenedor no esté lleno, si lo está
+muestra por consola "el contenedor ha llegado al máximo de su capacidad" y retorna falso,
+de lo contrario, muestra por consola "llenando contenedor...", espera 3 segundos,
+suma al contenedor 10 litros, muestra por consola "el contenedor tiene X litros"
+y retorna verdadero.
+· vaciar(): [método asincrono] comprueba que el contenedor no esté vacio, si lo está
+muestra por consola "el contenedor está vacio" y retorna falso, de lo contrario,
+muestra por consola "vaciando contenedor...", espera 2 segundos, resta al contenedor 5 litros,
+muestra por consola "el contenedor tiene X litros" y retorna true.
+· llenarCompleto(): realiza un bucle donde se llame al método llenar hasta que el contenedor
+esté lleno, recuerda que debes esperar a la finalización de la llamada antes de volver a llamarlo
+· vaciarCompleto(): realiza un bucle donde se llame al método vaciar hasta que el contenedor
+esté vacio, recuerda que debes esperar a la finalización de la llamada antes de volver a llamarlo
+llama a los métodos llenarCompleto() y vaciarCompleto() cuando la ventana se cargue.
+------------------------
+Ajax
+Fácil:
+Dentro de la carpeta Resources se encuentran los archivos necesarios para esta práctica.
+Modifica el archivo codigo.js para que, al pulsar sobre el botón, cambie el contenido de la página
+por el texto dentro del archivo ajax_info.txt
+Medio:
+Dentro de la carpeta Resources se encuentra el archivo clase.js
+Diseña una página web en la que se muestre la información de dicho archivo en forma de tabla HTML
+Difícil:
+Utiliza la siguiente API pública: https://shibe.online/
+Diseña una página con un carrusel (usa boostrap para que sea más fácil)
+que muestre 3 imagenes recogidas de la api
+------------------------
+
+Tema 8:
+
+Cookies
+Fácil:
+Utilizando cookies, muestra un mensaje en la página que indique la última vez que entraste
+si es la primera vez (aún no se ha creado la cookie) muestra "Has entrado en este sitio por primera vez"
+Medio:
+Diseña una página con una caja de texto y un botón 'recordar'
+Si se le da a 'recordar' se guardará el contenido de la caja de texto en una cookie y después,
+se vaciará la caja.
+Debajo debería poner 'Recordatorio: [frase a recordar]' si se le ha dado a recordar alguna vez,
+de lo contrario pondrá '¿Quieres que te recuerde algo?'
+Añade un botón para borrar la cookie
+Difícil:
+Formulario de inicio de sesión, puedes copiarlo de cualquier lado
+Crea las constantes para usuario y pass
+User: usuario
+Pass: User123
+Iniciar sesión solo mostrará una alerta que diga 'se ha iniciado sesión'
+Añade al formulario un chekbox 'recuerdame', si se inicia sesión con este chekado, se guardará el
+usuario y la contraseña en unas cookies y se mostrarán al cargar la página en el formulario
+añade un botón para borrar las cookies
+------------------------
+Web Storage
+Fácil:
+Dibuja un botón en la página
+Debajo de ese botón debe haber un contador de pulsaciones, cada vez que se pulse aumentará este contador
+Al recargar la página o salir y volver a entrar, este contador se reiniciará.
+Utiliza WebStorage para ello.
+Medio:
+Diseña una página con una caja de texto y un botón 'recordar'
+Si se le da a 'recordar' se guardará el contenido de la caja de texto en una local Web Storage y después,
+se vaciará la caja.
+Debajo debería poner 'Recordatorio: [frase a recordar]' si se le ha dado a recordar alguna vez,
+de lo contrario pondrá '¿Quieres que te recuerde algo?'
+Añade un botón para borrar la local Web Storage
+Difícil:
+Formulario de inicio de sesión, puedes copiarlo de cualquier lado
+Crea las constantes para usuario y pass
+User: usuario
+Pass: User123
+Iniciar sesión solo mostrará una alerta que diga 'se ha iniciado sesión'
+Añade al formulario un chekbox 'recuerdame', si se inicia sesión con este chekado, se guardará el
+usuario y la contraseña en unas local Web Storages y se mostrarán al cargar la página en el formulario
+añade un botón para borrar las local Web Storages
+------------------------
+Indexed DB
+Fácil:
+Diseña una página con una caja de texto y un botón 'agregar'
+Al pulsar el botón, si la caja no está vacia, se agregará su contenido
+a una base de datos indexdb (palabras) con una clave que se autoincrementa
+Medio:
+Diseña un formario para una persona (DNI, Nombre y Apellidos) todos los campos obligatorios
+al darle a enviar guardará estos datos en una base de datos indexdb (personas)
+crea también el botón limpiar para restablecer la información
+Añade un botón 'mostrar en consola' que muestre toda la información de la base de datos en consola
+Difícil:
+Diseña un formulario para un coche (Matricula, Modelo, Marca, Color, Kms(numerico))
+Matricula, Modelo y Marca son obligatorios
+Al pulsar en enviar, estos datos se guardarán en una base de datos indexdb (coches)
+Matricula será la clave
+Si no se han introducido color, por defecto será blanco, o kms, por defecto será 0
+crea también el botón limpiar para restablecer la información
+Añade un botón 'mostrar en consola' que muestre toda la información de la base de datos en consola
+Añade un botón 'editar', al pulsarlo comprobará el contenido de la caja 'matricula'
+si está vacio o no existe esa matricula, mostrará un mensaje de error indicando el motivo
+si existe la matricula en la base de datos, cargará la información de dicho vehículo en el resto de los campos
+------------------------

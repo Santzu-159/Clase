@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ejercicios Propuestos de JQuery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-color: burlywood;">
+
+        <!--Librería necesaria para los ejercicios-->
+        <div class="container mt-3 text-center">
+            <h1>Tema 7</h1>
+            <h3><span class="badge badge-secondary">{Callback, Promises, Asyn/Await, Ajax}</span></h3>
+        </div>
+
+        <!--Ejercicios Resueltos-->
+        <div class="container border border-primary mt-3 jumbotron">
+            <h1 class="display-5">Consultar Ejercicios Resueltos y Comentados:</h1>
+            <p class="lead"><a href="https://github.com/Lobozel/Clase/tree/master/DWECL/Examen3/Tema7/Code/Ejercicios%20Resueltos%20y%20Comentados">https://github.com/Lobozel/Clase/tree/master/DWECL/Examen3/Tema7/Code/Ejercicios%20Resueltos%20y%20Comentados</a></p>
+            <hr class="my-2">
+            <p>¡Puedes mandar un comprimido con los ejercicios realizados a Lobozel para que te los corriga personalmente!</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="https://github.com/Lobozel/Clase/tree/master/DWECL/Examen3/Tema7/Code/Ejercicios%20Resueltos%20y%20Comentados" role="button">Ir al Repositorio</a>
+            </p>
+          </div>
+
+          
+
+    
+        <!--Ejercicios-->
+        <div id="accordion" class='container mb-3'>
+            <!---->
+            <div class="card">
+              <div class="card-header" id="h1">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#ejercicio1" aria-expanded="true" aria-controls="ejercicio1">
+                    Ejercicio 1 | Callback
+                  </button>
+                </h5>
+              </div>          
+              <div id="ejercicio1" class="collapse show" aria-labelledby="h1" data-parent="#accordion">
+                <div class="card-body">
+                    <!--Enunciado del ejercicio 1-->
+                    Dentro de la carpeta <b>Resources</b> tendrás los archivos necesarios para esta práctica.<br>
+                    Modifica el archivo <b><i>Codigo.js</i></b> para crear una funcción Callback<br>
+                    esta función, se llamará en el evento onclick de cada botón, pero dependiendo el botón<br>
+                    realizará una acción u otra, para lograr esto deberás pasarle por parámetros la funcción correspondiente<br>
+                    del archivo <b><i>funciones.js</i></b>
+                </div>
+              </div>
+            </div>
+            <!---->
+            <div class="card">
+              <div class="card-header" id="h2">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ejercicio2" aria-expanded="false" aria-controls="ejercicio2">
+                    Ejercicio 2 | Promises
+                  </button>
+                </h5>
+              </div>
+              <div id="ejercicio2" class="collapse" aria-labelledby="h2" data-parent="#accordion">
+                <div class="card-body">
+                  <!--Enunciado del ejercicio 2-->
+                Escribe dos funciones que usen promesas y encadenalas<br>
+                · La primera función, recibirá un array de cadenas lo modificará conviertiendo todas las palabras a mayúsculas<br>
+                · Luego, la segunda función, ordenará el array alfabéticamente<br>
+                Si el array que se recibe por parámetros contiene uno o más elementos que no sean cadenas, <br>
+                deberá arrojar un error.<br>
+                Si todo ha ido bien, muestra por consola el array.
+                </div>
+              </div>
+            </div>
+            <!---->
+            <div class="card">
+              <div class="card-header" id="h3">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ejercicio3" aria-expanded="false" aria-controls="ejercicio3">
+                    Ejercicio 3 | Asyn/Await
+                  </button>
+                </h5>
+              </div>
+              <div id="ejercicio3" class="collapse" aria-labelledby="h3" data-parent="#accordion">
+                <div class="card-body">
+                  <!--Enunciado del ejercicio 3-->
+                Tenemos un contenedor con una capacidad máxima de 100 litros, invariable, con una <br>
+                capacidad actual random entre 0 y 100 ambos incluidos.<br>
+                Para aumentar o disminuir su contenido, necesitamos los siguientes métodos<br>
+                · llenar(): [método asincrono] comprueba que el contenedor no esté lleno, si lo está<br>
+                muestra por consola "el contenedor ha llegado al máximo de su capacidad" y retorna falso,<br>
+                de lo contrario, muestra por consola "llenando contenedor...", espera 3 segundos,<br>
+                suma al contenedor 10 litros, muestra por consola "el contenedor tiene X litros"<br>
+                y retorna verdadero.<br>
+                · vaciar(): [método asincrono] comprueba que el contenedor no esté vacio, si lo está<br>
+                muestra por consola "el contenedor está vacio" y retorna falso, de lo contrario,<br>
+                muestra por consola "vaciando contenedor...", espera 2 segundos, resta al contenedor 5 litros,<br>
+                muestra por consola "el contenedor tiene X litros" y retorna true.<br>
+                · llenarCompleto(): realiza un bucle donde se llame al método llenar hasta que el contenedor<br>
+                esté lleno, recuerda que debes esperar a la finalización de la llamada antes de volver a llamarlo<br>
+                · vaciarCompleto(): realiza un bucle donde se llame al método vaciar hasta que el contenedor<br>
+                esté vacio, recuerda que debes esperar a la finalización de la llamada antes de volver a llamarlo<br>
+                llama a los métodos llenarCompleto() y vaciarCompleto() cuando la ventana se cargue.
+                </div>
+              </div>
+            </div>
+            <!---->
+            <div class="card">
+                <div class="card-header" id="h4">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ejercicio4" aria-expanded="false" aria-controls="ejercicio4">
+                      Ejercicio 4 | Ajax
+                    </button>
+                  </h5>
+                </div>
+                <div id="ejercicio4" class="collapse" aria-labelledby="h4" data-parent="#accordion">
+                  <div class="card-body">
+                    <!--Enunciado del ejercicio 4-->
+                    Utiliza la siguiente API pública: <b><i><u>https://shibe.online/</u></i></b><br>
+                    Diseña una página con un carrusel (usa boostrap para que sea más fácil)<br>
+                    que muestre 3 imagenes recogidas de la api
+                    <span style='color:red; font-weight: bolder;'>(Opcional)</span> <span style='font-weight:bold;'>Intenta agregar algún efecto a la hora de mostrar u ocultar el elemento.</span>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <!--Dudas-->
+          <div class="container border border-info jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-5">¿Dudas con los ejercicios, atascado con un problema?</h1>
+              <p class="lead">Si encuentras algún inconveniente a la hora de resolver los ejercicios, ya sea porque no entiendes bien el enunciado o porque no consigues resolver alguna parte de un ejercicio, contacta con Lobozel y te ayudará a solucionar el problema.</p>
+            </div>
+          </div>
+    </body>
+</html>
