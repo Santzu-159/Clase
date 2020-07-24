@@ -4,6 +4,16 @@ https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
 ># Lista de referencias:
 https://www.w3schools.com/jquery/jquery_ref_overview.asp
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js
+<!-- y nuestro js-->
+
+
+$(document).ready(function(){}
+
+
+
 <SELECTORES>
 <PAGINAS-DE-INTERES>
     https://www.w3schools.com/jquery/jquery_ref_selectors.asp
@@ -183,6 +193,8 @@ dentro de la etiqueta de DOM de JQuery $("elemento"). //Debemos poner el selecto
 </ACCESO-RAPIDO>
 <EVENTOS>
 
+
+
 <!--      -->
 
 <EFECTOS>
@@ -193,6 +205,7 @@ dentro de la etiqueta de DOM de JQuery $("elemento"). //Debemos poner el selecto
     https://juanda.gitbooks.io/webapps/content/jQuery/efectos.html
 </PAGINAS-DE-INTERES>
 <ACCESO-RAPIDO>
+    effect(shake)
 · animate() --> Ejecuta una animación personalizada en los elementos seleccionados
 · clearQueue() --> Elimina todas las funciones en cola restantes de los elementos seleccionados
 · delay() --> Establece un retraso para todas las funciones en cola en los elementos seleccionados
@@ -305,6 +318,12 @@ dentro de la etiqueta de DOM de JQuery $("elemento"). //Debemos poner el selecto
 //Se han omitido algunos métodos removidos o deprecated
 </ACCESO-RAPIDO>
 </AJAX>
+
+//eliminar onsubmit, sino intentará validar en php
+           $("#loginSample").on('submit', function(e) {
+                e.preventDefault();
+            });
+
 
 <!--      -->
 
